@@ -455,6 +455,10 @@ papaya.volume.Volume.prototype.applyBestTransform = function () {
 papaya.volume.Volume.prototype.isWorldSpaceOnly = function () {
     /*jslint bitwise: true */
 
+    //Questo metodo crea problemi quando un file nifti è leggermente ruotato...
+    //Per il momento lo commento...
+    return false;
+/*
     var nifti, foundDataOrderTransform = false;
 
     if (this.header.fileFormat instanceof papaya.volume.nifti.HeaderNIFTI) {
@@ -472,4 +476,5 @@ papaya.volume.Volume.prototype.isWorldSpaceOnly = function () {
     }
 
     return false;
+*/
 };
